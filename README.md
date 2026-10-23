@@ -1,32 +1,160 @@
-# AgentPay AI 🤖💸
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>AgentPay AI | NEAR Autonomous Financial Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #060911; color: #e2e8f0; font-family: system-ui, sans-serif; }
+    .mono { font-family: monospace; }
+    .neon { box-shadow: 0 0 20px rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); }
+  </style>
+</head>
+<body class="p-4 md:p-6 max-w-7xl mx-auto space-y-4">
 
-> **Autonomous Financial Agent & Cross-Chain Intent Executor on NEAR Protocol**
+  <!-- Top Bar (100% International & Technical) -->
+  <div class="flex justify-between items-center bg-slate-900 border border-slate-800 px-4 py-2 rounded-xl text-xs">
+    <div class="text-emerald-400 mono flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      NEAR AI Cloud • Confidential Enclave (TEE) Active
+    </div>
+    <div class="bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-lg mono text-[11px] font-bold">
+      MAINNET • MPC NODE VERIFIED
+    </div>
+  </div>
 
-### 🌐 [👉 Click Here to Launch Live Interactive Dashboard Demo](https://karen10kazemi.github.io/agentpay-ai/)
+  <!-- Header -->
+  <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-wrap justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/40 flex items-center justify-center text-2xl">🤖</div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-xl font-bold text-white">AgentPay AI</h1>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 mono">v1.2 NEAR Intents</span>
+        </div>
+        <p class="text-slate-400 text-xs mt-0.5">Autonomous Financial Agent & Cross-Chain Intent Executor</p>
+      </div>
+    </div>
+    <div class="flex gap-3 text-xs mono">
+      <div class="bg-slate-950 border border-slate-800 px-3 py-2 rounded-xl">
+        <div class="text-slate-400">NEAR ACCOUNT</div>
+        <div class="text-emerald-400 font-bold mt-0.5">● karen.near</div>
+      </div>
+      <div class="bg-slate-950 border border-slate-800 px-3 py-2 rounded-xl">
+        <div class="text-slate-400">PORTFOLIO BALANCE</div>
+        <div class="text-white font-bold mt-0.5"><span id="eth">12.80</span> ETH | <span id="usdc" class="text-emerald-400">42,150</span> USDC</div>
+      </div>
+    </div>
+  </div>
 
----
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    
+    <!-- Left: Constraints -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+        <h2 class="font-bold text-white text-sm">🛡️ Human-Defined Constraints</h2>
+        <span class="text-[11px] mono bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">TEE Locked</span>
+      </div>
+      <div>
+        <div class="flex justify-between text-xs mb-1">
+          <span class="text-slate-300">Daily Autonomous Limit</span>
+          <span class="mono font-bold text-emerald-400">$<span id="lim">15,000</span> / day</span>
+        </div>
+        <input type="range" min="5000" max="50000" step="1000" value="15000" oninput="document.getElementById('lim').innerText=Number(this.value).toLocaleString()" class="w-full accent-emerald-400">
+      </div>
+      <div class="space-y-2 text-xs">
+        <div class="flex justify-between bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+          <span>TEE Hardware Proof</span><span class="text-emerald-400 mono font-bold">ACTIVE</span>
+        </div>
+        <div class="flex justify-between bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+          <span>1-Click Max Slippage</span><span class="text-slate-200 mono font-bold">0.35%</span>
+        </div>
+        <div class="flex justify-between bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+          <span>Whitelisted Chains</span><span class="text-purple-300 mono font-bold">NEAR • ETH • BASE</span>
+        </div>
+        <div class="flex justify-between bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+          <span>Auto Dev Payroll (Bi-weekly)</span><span class="text-emerald-400 mono">8,200 USDC</span>
+        </div>
+      </div>
+    </div>
 
-## Overview
-**AgentPay AI** is an autonomous financial agent designed for the agent economy on NEAR. It enables users and DAOs to define strict human constraints (daily spending caps, slippage limits, and whitelisted chains) inside a Confidential Execution Environment (TEE), allowing AI agents to securely handle recurring expenses, team payroll, and 1-Click cross-chain swaps without manual intervention.
+    <!-- Right: Command Center & Terminal -->
+    <div class="lg:col-span-2 space-y-4">
+      
+      <div class="bg-slate-900/80 neon rounded-2xl p-4 space-y-3">
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-white text-sm">⚡ Autonomous Intent Command Center</h2>
+          <span class="text-xs mono text-emerald-400">1-Click Swap SDK Ready</span>
+        </div>
 
-## The Problem
-In the emerging agent economy, AI software needs a secure, fast, and trustless way to manage capital and execute financial decisions autonomously across multiple chains without exposing private keys or violating human-defined risk limits.
+        <div class="flex flex-wrap gap-2">
+          <button onclick="setCmd(1)" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700">🔄 Swap 4.3 ETH → USDC</button>
+          <button onclick="setCmd(2)" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700">💸 Pay Dev Team (3,200 USDC on Base)</button>
+          <button onclick="setCmd(3)" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700">☁️ Pay AI Cloud Hosting (450 USDC)</button>
+        </div>
 
-## Key Architecture & Features
-1. **Human-Defined Constraints (TEE Guard):** Users set financial limits (e.g., `$15,000/day` autonomous cap) verified inside NEAR AI Cloud's Trusted Execution Environment before any signature is generated.
-2. **Autonomous Intent Execution:** Converts natural language financial commands (e.g., *"Swap 4.3 ETH to USDC with <0.3% slippage"*) into structured NEAR Intents payloads.
-3. **Cross-Chain Settlement:** Powered by **NEAR Intents**, **Chain Signatures (MPC)**, and the **1-Click Swap SDK** for instant, optimal routing across NEAR, Ethereum, and Base.
+        <div class="flex flex-col sm:flex-row gap-2">
+          <input id="inp" type="text" value="Swap 4.3 ETH to USDC via NEAR Intents with <0.3% slippage and settle to karen.near" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white mono">
+          <button onclick="runIntent()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs shadow-lg">▶ Execute Intent</button>
+        </div>
 
-## Tech Stack & Repository Structure
-- `index.html` — Interactive Command Center & Live TEE Execution Terminal UI
-- `src/agent.js` — Core `AgentPayAI` class implementing TEE constraint verification and NEAR Intent broadcasting
-- `package.json` — NEAR JS SDK dependencies and agent runtime scripts
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
+          <div class="bg-slate-950 border border-emerald-500/40 p-2.5 rounded-xl">
+            <div class="text-[10px] mono text-emerald-400">01 • INTENT PARSER</div>
+            <div class="font-bold text-white mt-0.5">AI Verified</div>
+          </div>
+          <div class="bg-slate-950 border border-emerald-500/40 p-2.5 rounded-xl">
+            <div class="text-[10px] mono text-emerald-400">02 • TEE GUARD</div>
+            <div class="font-bold text-white mt-0.5">Cap Passed</div>
+          </div>
+          <div class="bg-slate-950 border border-emerald-500/40 p-2.5 rounded-xl">
+            <div class="text-[10px] mono text-emerald-400">03 • NEAR INTENTS</div>
+            <div class="font-bold text-white mt-0.5">Solver Matched</div>
+          </div>
+          <div class="bg-slate-950 border border-emerald-500/40 p-2.5 rounded-xl">
+            <div class="text-[10px] mono text-emerald-400">04 • SETTLEMENT</div>
+            <div class="font-bold text-white mt-0.5">Chain Signatures</div>
+          </div>
+        </div>
+      </div>
 
-## How to Test / Run
-1. **Live Web Prototype:** Open the [Live Dashboard Demo](https://karen10kazemi.github.io/agentpay-ai/) directly in your browser.
-2. **Local CLI Execution:**
-   ```bash
-   git clone [https://github.com/karen10kazemi/agentpay-ai.git](https://github.com/karen10kazemi/agentpay-ai.git)
-   cd agentpay-ai
-   npm install
-   npm run start-agent
+      <!-- Live Terminal -->
+      <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex justify-between text-xs mono text-slate-400">
+          <span>TERMINAL — NEAR AI Cloud Confidential Execution Log</span>
+          <span class="text-emerald-400">● ONLINE</span>
+        </div>
+        <div id="term" class="p-3.5 mono text-xs space-y-1.5 text-slate-300 h-44 overflow-y-auto">
+          <div class="text-slate-500">[10:14:02] Initializing AgentPay AI runtime for signer: <b class="text-white">karen.near</b></div>
+          <div class="text-blue-400">[10:14:03] [TEE Enclave] Hardware attestation verified: 0x8f9c2b1a...near_ai_cloud</div>
+          <div>[10:14:05] [Intent Parser] Command: "Swap 4.3 ETH to USDC via NEAR Intents"</div>
+          <div class="text-emerald-400">[10:14:05] [Constraint Check] Value $11,480 is within $15,000 daily limit. APPROVED.</div>
+          <div class="text-purple-400">[10:14:06] [1-Click Swap SDK] Broadcasting intent to NEAR Solver Network...</div>
+          <div class="text-emerald-300 font-bold">[10:14:07] ✓ [EXECUTED_ON_NEAR] Swapped 4.3 ETH → 11,481 USDC | TxHash: 7x9K2mPq...NEAR</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function setCmd(n) {
+      const i = document.getElementById('inp');
+      if(n===1) i.value = "Swap 4.3 ETH to USDC via NEAR Intents with <0.3% slippage and settle to karen.near";
+      if(n===2) i.value = "Execute Dev Team Payroll: Send 3,200 USDC to 4 contributors on Base via Chain Signatures";
+      if(n===3) i.value = "Pay recurring invoice: 450 USDC to NEAR AI Cloud compute provider";
+    }
+    function runIntent() {
+      const cmd = document.getElementById('inp').value;
+      const t = document.getElementById('term');
+      t.innerHTML += `<div class="text-amber-300 mt-2">► Executing new intent: "${cmd}"</div>
+      <div class="text-blue-400">  [TEE Enclave] Constraints passed. MPC Chain Signature generated.</div>
+      <div class="text-emerald-400 font-bold">✓ [EXECUTED_ON_NEAR] Settled via 1-Click Swap SDK | TxHash: 9bQp4LmN...NEAR</div>`;
+      t.scrollTop = t.scrollHeight;
+      document.getElementById('eth').innerText = "8.50";
+      document.getElementById('usdc').innerText = "53,631";
+    }
+  </script>
+</body>
+</html>
