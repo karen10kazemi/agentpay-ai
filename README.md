@@ -1,22 +1,32 @@
 # AgentPay AI 🤖💸
 
+> **Autonomous Financial Agent & Cross-Chain Intent Executor on NEAR Protocol**
+
+### 🌐 [👉 Click Here to Launch Live Interactive Dashboard Demo](https://karen10kazemi.github.io/agentpay-ai/)
+
+---
+
 ## Overview
-AgentPay AI is an autonomous financial agent designed for the agent economy. It allows users to set rules and constraints for AI agents to securely handle recurring expenses, team payouts, and cross-chain transactions without manual intervention.
+**AgentPay AI** is an autonomous financial agent designed for the agent economy on NEAR. It enables users and DAOs to define strict human constraints (daily spending caps, slippage limits, and whitelisted chains) inside a Confidential Execution Environment (TEE), allowing AI agents to securely handle recurring expenses, team payroll, and 1-Click cross-chain swaps without manual intervention.
 
 ## The Problem
-In the emerging agent economy, AI software needs a secure, fast, and trustless way to manage money and execute financial decisions autonomously, eliminating friction in cross-chain payments.
+In the emerging agent economy, AI software needs a secure, fast, and trustless way to manage capital and execute financial decisions autonomously across multiple chains without exposing private keys or violating human-defined risk limits.
 
-## How It Works
-1. **Define Rules:** The user sets financial limits and conditions (e.g., automated recurring service payments or team payroll).
-2. **Autonomous Execution:** The agent processes and monitors transactions within the defined human constraints.
-3. **NEAR Integration:** Powered by NEAR’s fast execution and intent-based architecture, ensuring seamless and secure cross-chain value movement.
+## Key Architecture & Features
+1. **Human-Defined Constraints (TEE Guard):** Users set financial limits (e.g., `$15,000/day` autonomous cap) verified inside NEAR AI Cloud's Trusted Execution Environment before any signature is generated.
+2. **Autonomous Intent Execution:** Converts natural language financial commands (e.g., *"Swap 4.3 ETH to USDC with <0.3% slippage"*) into structured NEAR Intents payloads.
+3. **Cross-Chain Settlement:** Powered by **NEAR Intents**, **Chain Signatures (MPC)**, and the **1-Click Swap SDK** for instant, optimal routing across NEAR, Ethereum, and Base.
 
-## Tech Stack & NEAR Tools Used
-- NEAR Intents / Chain Signatures
-- NEAR AI Cloud / Confidential Execution
-- 1-Click Swap SDK
+## Tech Stack & Repository Structure
+- `index.html` — Interactive Command Center & Live TEE Execution Terminal UI
+- `src/agent.js` — Core `AgentPayAI` class implementing TEE constraint verification and NEAR Intent broadcasting
+- `package.json` — NEAR JS SDK dependencies and agent runtime scripts
 
 ## How to Test / Run
-1. Clone the repository.
-2. Install dependencies.
-3. Run the agent configuration with: `npm run start-agent`
+1. **Live Web Prototype:** Open the [Live Dashboard Demo](https://karen10kazemi.github.io/agentpay-ai/) directly in your browser.
+2. **Local CLI Execution:**
+   ```bash
+   git clone [https://github.com/karen10kazemi/agentpay-ai.git](https://github.com/karen10kazemi/agentpay-ai.git)
+   cd agentpay-ai
+   npm install
+   npm run start-agent
