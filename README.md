@@ -6,6 +6,11 @@
 
 ---
 
+## 🖥️ Live Prototype Preview
+*(همین اسکرین‌شات جدید خود را دقیقاً در این خط Drag & Drop یا Paste کنید)*
+
+---
+
 ## Overview
 **AgentPay AI** is an autonomous financial agent designed for the agent economy on NEAR. It enables users and DAOs to define strict human constraints (daily spending caps, slippage limits, and whitelisted chains) inside a Confidential Execution Environment (TEE), allowing AI agents to securely handle recurring expenses, team payroll, and 1-Click cross-chain swaps without manual intervention.
 
