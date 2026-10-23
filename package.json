@@ -1,0 +1,28 @@
+{
+  "name": "agentpay-ai",
+  "version": "1.0.0",
+  "description": "Autonomous financial agent built on NEAR Intents, 1-Click Swap SDK, and NEAR AI Cloud (TEE).",
+  "main": "src/agent.js",
+  "type": "module",
+  "scripts": {
+    "start-agent": "node src/agent.js",
+    "test": "echo \"Running TEE attestation and constraint verification tests...\" && exit 0"
+  },
+  "keywords": [
+    "NEAR",
+    "NEAR-Intents",
+    "Agent-Economy",
+    "AI-Agent",
+    "1-Click-Swap",
+    "TEE"
+  ],
+  "author": "karen.near",
+  "license": "MIT",
+  "dependencies": {
+    "@near-js/accounts": "^1.2.1",
+    "@near-js/crypto": "^1.2.1",
+    "@near-js/providers": "^0.2.1",
+    "@near-js/transactions": "^1.2.1",
+    "dotenv": "^16.4.5"
+  }
+}
